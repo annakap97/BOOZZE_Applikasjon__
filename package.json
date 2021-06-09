@@ -4,7 +4,10 @@
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build-macOS": "electron-packager . BOOZZE --out=./builds --overwrite --icon=./app_icons/boozzeikon.icns ",
+    "build-Linux": "electron-packager . BOOZZE --out=./builds --overwrite --platform=linux --icon=./app_icons/boozzeikon.icns "
+
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
@@ -17,6 +20,7 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^13.1.1"
+    "electron": "^13.1.1",
+    "electron-packager": "^15.2.0"
   }
 }
